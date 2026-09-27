@@ -448,7 +448,29 @@ The current execution identified defects related to:
 - Invalid `totalprice` data type
 - Missing required fields
 - Empty request payload
-21. Conclusion
+
+## Test Report
+
+An Allure test report generated from the latest test execution is included in the repository:
+
+- `Allure-Test-Report.pdf`
+
+The report provides:
+- Overall test execution summary
+- Passed and failed test counts
+- Test grouping
+- Individual test execution details
+- Contract/schema validation results
+- Negative test results
+
+The five failed negative tests represent defects identified in the Restful Booker API and are documented separately in `BUGS.md`.
+
+To generate an interactive Allure report locally:
+
+```bash
+mvn clean test
+allure serve allure-results
+22. Conclusion
 
 This project provides a maintainable REST API automation framework for the Restful Booker API using Java, REST Assured, TestNG, Maven, and JSON Schema validation.
 
