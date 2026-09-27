@@ -406,6 +406,48 @@ Additional schema validation can be added for other API responses.
 
 More reusable POJO classes can also be introduced for request and response serialization instead of maintaining JSON payloads directly as strings.
 
+
+21. Test Reporting
+
+This project uses Allure Report for human-readable test execution reporting.
+
+### Generate Test Results
+
+Run the test suite using:
+
+mvn clean test
+
+The test results are generated in the `allure-results` directory.
+
+### Generate Allure Report
+
+Use:
+
+allure serve allure-results
+
+This opens the Allure report in the browser.
+
+The report provides:
+
+- Overall pass/fail summary
+- Individual test results
+- Test duration
+- Test grouping by feature
+- Failure details
+- Defect categorization
+- Contract/schema validation results
+
+### Current Test Execution
+
+The negative test cases intentionally fail where the API does not meet the expected contract. These failures are documented as defects in `BUGS.md`.
+
+The current execution identified defects related to:
+
+- Negative price acceptance
+- Invalid booking dates
+- Invalid `totalprice` data type
+- Missing required fields
+- Empty request payload
 21. Conclusion
 
 This project provides a maintainable REST API automation framework for the Restful Booker API using Java, REST Assured, TestNG, Maven, and JSON Schema validation.
