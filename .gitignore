@@ -1,0 +1,18 @@
+# Maven
+target/
+
+# Allure
+allure-results/
+allure-report/
+
+# Test output
+test-output/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
